@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stronger, a workout tracker for Android</title>
+<meta name="description" content="Stronger is a free workout tracker for Android in the spirit of Strong. Rest timer, live records, rep targets, plateau detection and Strong import. No account, no internet permission.">
+<meta property="og:title" content="Stronger, a workout tracker for Android">
+<meta property="og:description" content="Free, no account, no internet permission. Imports your Strong history.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stronger.hassandev.me/">
+<meta property="og:image" content="https://stronger.hassandev.me/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d05560">
+<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/gsf_r100_w800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/gsf_r50_w400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="mark" href="#hero" aria-label="Stronger, back to top">
+    <svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true"><g transform="rotate(-45 32 32)" fill="currentColor"><rect x="14" y="29" width="36" height="6" rx="3"/><rect x="9" y="14" width="9" height="36" rx="4.5"/><rect x="1" y="21" width="7" height="22" rx="3.5"/><rect x="46" y="14" width="9" height="36" rx="4.5"/><rect x="56" y="21" width="7" height="22" rx="3.5"/></g></svg>
+    <span>Stronger</span>
+  </a>
+  <nav class="top-links" aria-label="Sections">
+    <a href="#features">What it notices</a>
+    <a href="#import">Import from Strong</a>
+    <a href="#everything">Everything</a>
+    <a href="#questions">Questions</a>
+  </nav>
+  <a class="btn btn-top" href="https://github.com/hassanaziz0012/stronger/releases/latest/download/stronger-1.0.0.apk">Download APK</a>
+</header>
+
+<main>
+
+<section class="chapter hero" id="hero" data-ink="#240407" data-btn="#240407" data-btn-ink="#fff0ef">
+  <h1 class="hero-title"><span class="pale">Get</span> <span class="dark">Stronger</span></h1>
+  <div class="hero-foot">
+    <p>A workout tracker for Android in the spirit of Strong, built to feel at home on a Pixel. Free, with no account and no internet permission.</p>
+    <div class="hero-actions">
+      <a class="btn btn-big" href="https://github.com/hassanaziz0012/stronger/releases/latest/download/stronger-1.0.0.apk">Download APK</a>
+      <a class="plain-link" href="https://github.com/hassanaziz0012/stronger">Read the source</a>
+    </div>
+    <p class="note">Version 1.0.0, 4.6 MB, Android 13 or newer.</p>
+  </div>
+  <figure class="hero-shot">
+    <img src="assets/img/live2.webp" width="720" height="1536" alt="Stronger during a workout: Bent Over Row with a record trophy on the first set and a rest timer counting down from two minutes.">
+  </figure>
+</section>
+
+<section class="chapter try" id="try" data-ink="#240407" data-btn="#240407" data-btn-ink="#fff0ef">
+  <div class="try-main">
+    <label class="try-label" for="set">Type a set you lifted, and see what Stronger works out from it.</label>
+    <div class="try-field" data-ui>
+      <input id="set" class="try-input" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" value="100 kg × 5" aria-describedby="answer">
+    </div>
+    <div class="answer" id="answer" data-ui aria-live="polite">
+      <div class="answer-row"><span>Estimated one-rep max</span><strong id="a-1rm">116.7 kg</strong></div>
+      <div class="answer-row"><span id="a-bar">Each side of a 20 kg bar</span><strong id="a-plates">25 + 15</strong></div>
+      <div class="answer-row"><span>Next time, on an 8–12 rep target</span><strong id="a-next">100 kg × 6</strong></div>
+    </div>
+    <div class="examples">
+      <button type="button" data-set="60 kg × 12">60 kg × 12</button>
+      <button type="button" data-set="225 lb × 3">225 lb × 3</button>
+      <button type="button" data-set="142.5 kg × 1">142.5 kg × 1</button>
+    </div>
+  </div>
+  <figure class="try-clip">
+    <video src="assets/img/tick.mp4" poster="assets/img/tick-poster.webp" width="720" height="1536" muted loop playsinline autoplay preload="metadata" aria-label="Screen recording: ticking a set of Bent Over Row marks it as a record and starts the rest timer."></video>
+    <figcaption>Recorded on a Pixel 9. Tick a set and the rest timer starts itself.</figcaption>
+  </figure>
+</section>
+
+<section class="chapter features" id="features" data-ink="#fff0ef" data-btn="#fff0ef" data-btn-ink="#240407">
+  <div class="mosaic">
+    <div class="tile t-head">
+      <h2>It pays attention</h2>
+    </div>
+    <figure class="tile t-shot t-shot-a">
+      <img src="assets/img/ex1.webp" width="720" height="1536" loading="lazy" alt="The Bench Press (Dumbbell) page: progress marked Stalled with advice, rep targets of 8 to 12, next session's sets and an estimated one-rep-max chart.">
+    </figure>
+    <div class="tile t-figure">
+      <p class="figure">155</p>
+      <p>exercises built in, named the way Strong names them.</p>
+    </div>
+    <div class="tile t-list">
+      <ul>
+        <li>Warm-ups</li>
+        <li>Drop sets</li>
+        <li>Supersets</li>
+        <li>Rest-pauses</li>
+      </ul>
+    </div>
+    <div class="tile t-say t-say-a">
+      <p>A trophy lands on the set the moment you beat a record.</p>
+    </div>
+    <figure class="tile t-shot t-shot-b">
+      <img src="assets/img/history.webp" width="720" height="1536" loading="lazy" alt="The History tab: a November calendar with five workout days marked and a Push workout card showing one record.">
+    </figure>
+    <div class="tile t-say t-say-b">
+      <p>Type 225 for 22.5 and it asks first.</p>
+    </div>
+    <div class="tile t-say t-say-c">
+      <p>A stalled lift gets a plan.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter import" id="import" data-ink="#06281b" data-btn="#06281b" data-btn-ink="#c4f0d9">
+  <h2>Bring your Strong history</h2>
+  <div class="stages" data-ui>
+    <div class="stage s1" style="--grow:12">
+      <div class="seg"><span>About two minutes</span></div>
+      <p>First, download the APK and let Android install it.</p>
+    </div>
+    <div class="stage s2" style="--grow:6">
+      <div class="seg"><span>One minute</span></div>
+      <p>Then, in Strong, open Settings and choose Export data.</p>
+    </div>
+    <div class="stage s3" style="--grow:1">
+      <div class="seg"><span>Seconds</span></div>
+      <p>Last, pick that CSV in Stronger's Settings.</p>
+    </div>
+  </div>
+  <p class="import-note">Exercises are matched by name, unknown ones become custom exercises, and every record is recalculated. Importing the same file again skips the workouts already there.</p>
+</section>
+
+<section class="chapter everything" id="everything" data-ink="#240407" data-btn="#240407" data-btn-ink="#fff0ef">
+  <div class="ev-head">
+    <h2><span class="soft">Everything it does,</span> <span>tab by tab</span></h2>
+    <a class="btn" href="https://github.com/hassanaziz0012/stronger/releases/latest/download/stronger-1.0.0.apk">Download APK</a>
+  </div>
+  <div class="ev-body">
+    <div class="tabs" role="tablist" aria-label="Parts of the app">
+      <button role="tab" id="tab-workout" aria-controls="p-workout" aria-selected="true">Workout<small>Plan and start</small></button>
+      <button role="tab" id="tab-live" aria-controls="p-live" aria-selected="false" tabindex="-1">Live workout<small>Between sets</small></button>
+      <button role="tab" id="tab-exercises" aria-controls="p-exercises" aria-selected="false" tabindex="-1">Exercises<small>Progress per lift</small></button>
+      <button role="tab" id="tab-history" aria-controls="p-history" aria-selected="false" tabindex="-1">History<small>What you did</small></button>
+      <button role="tab" id="tab-body" aria-controls="p-body" aria-selected="false" tabindex="-1">Body<small>Weight and health</small></button>
+      <button role="tab" id="tab-data" aria-controls="p-data" aria-selected="false" tabindex="-1">Data<small>In, out, units</small></button>
+    </div>
+    <div class="panels">
+      <div class="panel has-shot" role="tabpanel" id="p-workout" aria-labelledby="tab-workout">
+        <h3 class="panel-title">Workout</h3>
+        <dl>
+          <div><dt>Weekly goal</dt><dd>A goal ring, a seven-day strip and a week streak on the first screen.</dd></div>
+          <div><dt>Up next</dt><dd>The template your rotation says comes next is listed first, with how long it usually takes.</dd></div>
+          <div><dt>Templates</dt><dd>Create, edit, duplicate and preview. Save any past workout as one, or update one with today's sets.</dd></div>
+          <div><dt>One reminder</dt><dd>Half an hour before you usually train, only on days when skipping would break your goal or streak.</dd></div>
+          <div><dt>Monthly recap</dt><dd>Workouts, time, volume, records and biggest one-rep-max gains, shown for the first week of each month.</dd></div>
+          <div><dt>Resume</dt><dd>A workout in progress comes back from anywhere, even after the app is killed.</dd></div>
+        </dl>
+        <figure><img src="assets/img/workout.webp" width="720" height="1536" loading="lazy" alt="The Workout tab: a weekly goal ring at one of five, a three week streak, and the Pull template marked Up next."></figure>
+      </div>
+      <div class="panel has-shot" role="tabpanel" id="p-live" aria-labelledby="tab-live">
+        <h3 class="panel-title">Live workout</h3>
+        <dl>
+          <div><dt>Previous</dt><dd>Last time's matching set beside every row. Warm-ups pair with warm-ups. Tap it to copy.</dd></div>
+          <div><dt>Rest timer</dt><dd>Starts when you tick a set. Add or drop 15 seconds, or skip, in the app and from the notification.</dd></div>
+          <div><dt>Live records</dt><dd>A trophy on the set the moment you beat a record, and an outlined one on sets whose numbers would.</dd></div>
+          <div><dt>Rep targets</dt><dd>Double progression: one more rep each session, then more weight and the reps reset.</dd></div>
+          <div><dt>Reps left?</dt><dd>Optional reps in reserve after a working set. Easy sets make the next target jump twice as far.</dd></div>
+          <div><dt>Finish time</dt><dd>"Done ~7:40 PM", estimated from your usual pace per set, in the header and the notification.</dd></div>
+          <div><dt>Live Update</dt><dd>An ongoing notification with rest progress, what's up next and a Complete set button, promoted on Android 16.</dd></div>
+          <div><dt>Forgot to finish?</dt><dd>After an hour with no set ticked it asks "Still training?" and trims the idle time off the workout.</dd></div>
+        </dl>
+        <figure><img src="assets/img/live1.webp" width="720" height="1536" loading="lazy" alt="A live Pull workout: sets with previous numbers, outlined trophies on sets that would be records, and an estimated finish time."></figure>
+      </div>
+      <div class="panel has-shot" role="tabpanel" id="p-exercises" aria-labelledby="tab-exercises">
+        <h3 class="panel-title">Exercises</h3>
+        <dl>
+          <div><dt>155 built in</dt><dd>Named like Strong's, "Bench Press (Barbell)", plus your own custom exercises.</dd></div>
+          <div><dt>Find fast</dt><dd>Search, body-part filters, and sorting by name, frequency or recency.</dd></div>
+          <div><dt>Progress chart</dt><dd>Estimated one-rep max, max weight and volume. Reps or time for the other categories.</dd></div>
+          <div><dt>Plateaus</dt><dd>Each lift is marked progressing, stalled or going backwards, with what to try next.</dd></div>
+          <div><dt>Deload hint</dt><dd>When several lifts stall at once, the Workout tab suggests a deload week.</dd></div>
+          <div><dt>Records</dt><dd>Full history, records and a rep-records table for every exercise.</dd></div>
+        </dl>
+        <figure><img src="assets/img/exercises.webp" width="720" height="1536" loading="lazy" alt="The Exercises tab: search, body-part filters and an A to Z list."></figure>
+      </div>
+      <div class="panel" role="tabpanel" id="p-history" aria-labelledby="tab-history">
+        <h3 class="panel-title">History</h3>
+        <dl>
+          <div><dt>Calendar</dt><dd>A month view of the days you trained.</dd></div>
+          <div><dt>Workout cards</dt><dd>Grouped by month, with best sets and how many records each workout set.</dd></div>
+          <div><dt>Every set</dt><dd>Workout detail with each set and its estimated one-rep max.</dd></div>
+          <div><dt>Edit the past</dt><dd>Change or delete an old workout and the trophies after it are awarded again.</dd></div>
+          <div><dt>Do it again</dt><dd>Repeat a past workout, or save it as a template.</dd></div>
+          <div><dt>Profile</dt><dd>All-time totals, workouts per week against your goal, recent records and a plate calculator.</dd></div>
+        </dl>
+      </div>
+      <div class="panel" role="tabpanel" id="p-body" aria-labelledby="tab-body">
+        <h3 class="panel-title">Body and health</h3>
+        <dl>
+          <div><dt>Body weight</dt><dd>A smoothed trend, so daily swings don't mislead, with 7, 30 and 90-day changes.</dd></div>
+          <div><dt>Measurements</dt><dd>Body fat and tape measurements such as waist, chest and arms, in cm or inches.</dd></div>
+          <div><dt>Workouts out</dt><dd>Finished workouts are written to Health Connect as exercise sessions. Edits and deletes follow.</dd></div>
+          <div><dt>Weight in</dt><dd>Weight from scales and other apps comes in through Health Connect, deletions included.</dd></div>
+          <div><dt>Recovery</dt><dd>Last week's cardio against 150 minutes, plus steps, resting heart rate and sleep.</dd></div>
+        </dl>
+      </div>
+      <div class="panel" role="tabpanel" id="p-data" aria-labelledby="tab-data">
+        <h3 class="panel-title">Data</h3>
+        <dl>
+          <div><dt>Strong import</dt><dd>Strong's CSV export, in both the older comma and newer semicolon formats.</dd></div>
+          <div><dt>Backup</dt><dd>Everything, measurements included, to one JSON file you can restore on any phone.</dd></div>
+          <div><dt>Units</dt><dd>kg or lb, default rest, weekly goal, bar weight and the plates you own.</dd></div>
+          <div><dt>Offline</dt><dd>The app has no internet permission. Your log stays on the phone unless you export it.</dd></div>
+          <div><dt>No account</dt><dd>Nothing to sign up for and nothing to sign in to.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter questions" id="questions" data-ink="#240407" data-btn="#240407" data-btn-ink="#fff0ef">
+  <h2>Before you install</h2>
+  <div class="faq">
+    <details name="faq" open>
+      <summary>Is it really free?</summary>
+      <p>Yes. There is no paid tier, no ads and no account. The code is on GitHub for anyone to read or build.</p>
+    </details>
+    <details name="faq">
+      <summary>Why isn't it on Google Play?</summary>
+      <p>It is one person's project and is shared as an APK from GitHub. The release is signed with a debug key for now, so Android or Play Protect may ask you to confirm the install. If you would rather not trust a download, build it from the source.</p>
+    </details>
+    <details name="faq">
+      <summary>How do I install an APK?</summary>
+      <p>Open the downloaded file on your phone. Android asks once whether your browser may install apps. Allow it, then tap Install.</p>
+    </details>
+    <details name="faq">
+      <summary>Which phones does it run on?</summary>
+      <p>Anything on Android 13 or newer. It is designed around Pixels: it takes its colours from your wallpaper, and the workout notification becomes a Live Update on Android 16.</p>
+    </details>
+    <details name="faq">
+      <summary>Why is everything pink in the screenshots?</summary>
+      <p>Because that is the wallpaper on the phone they were taken on. Stronger uses Material You, so on your phone it wears your colours.</p>
+    </details>
+    <details name="faq">
+      <summary>Where does my data go?</summary>
+      <p>Nowhere. The app has no internet permission. Your log lives on your phone, Health Connect sync is optional, and backups are a JSON file you keep.</p>
+    </details>
+    <details name="faq">
+      <summary>Is this made by the Strong team?</summary>
+      <p>No. Stronger is an independent app made by someone who likes how Strong works. It reads Strong's CSV export and nothing else of theirs.</p>
+    </details>
+    <details name="faq">
+      <summary>Does it work in pounds?</summary>
+      <p>Yes. Pick kg or lb in Settings, along with your bar weight and the plates your gym has, and the plate calculator follows.</p>
+    </details>
+  </div>
+</section>
+
+<section class="chapter get" id="get" data-ink="#240407" data-btn="#240407" data-btn-ink="#fff0ef">
+  <a class="get-link" href="https://github.com/hassanaziz0012/stronger/releases/latest/download/stronger-1.0.0.apk">
+    <span class="get-sub">Stronger 1.0.0 for Android 13 and newer, 4.6 MB.</span>
+    <span class="get-word">Download</span>
+  </a>
+</section>
+
+</main>
+
+<footer class="chapter foot" id="foot" data-ink="#fff0ef" data-btn="#fff0ef" data-btn-ink="#240407">
+  <p class="foot-name" aria-hidden="true">Stronger</p>
+  <div class="foot-row">
+    <ul class="foot-places">
+      <li><a href="https://github.com/hassanaziz0012/stronger/releases/latest">Latest release</a></li>
+      <li><a href="https://github.com/hassanaziz0012/stronger">Source on GitHub</a></li>
+      <li><a href="https://github.com/hassanaziz0012/stronger/issues">Report a bug</a></li>
+    </ul>
+    <div class="foot-cols">
+      <ul>
+        <li><a href="#features">What it notices</a></li>
+        <li><a href="#import">Import from Strong</a></li>
+        <li><a href="#everything">Everything it does</a></li>
+        <li><a href="#questions">Questions</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://hassandev.me">Made by Hassan Aziz</a></li>
+        <li><a href="https://github.com/hassanaziz0012">GitHub profile</a></li>
+        <li><a href="https://github.com/hassanaziz0012/stronger-site">This page's source</a></li>
+      </ul>
+      <p>Screenshots and the clip are the app running on a Pixel 9. Set in Google Sans Flex, the app's own typeface, under the Open Font License.</p>
+    </div>
+  </div>
+  <div class="foot-last">
+    <p>Stronger is not affiliated with Strong Fitness.</p>
+    <a href="#hero">Back to top</a>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
